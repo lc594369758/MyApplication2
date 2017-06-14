@@ -57,7 +57,7 @@ public class OKUtils_new {
                             i.putExtra("message1", response);
                             activity.startActivity(i);*/
                             Intent intent1=new Intent();
-                            intent1.setAction(Constant.REMOTE_LOGIN);
+                            intent1.setAction("403");
                             intent1.putExtra("errormsg",myresponse.getErrormsg());
                             activity.sendBroadcast(intent1);
 //                            activity.finish();
@@ -70,7 +70,7 @@ public class OKUtils_new {
                             activity.sendBroadcast(intent);
                             iSupportOkHttp.requestCompleted(task_name, Constant.UPDATE);*/
                             Intent intent1=new Intent();
-                            intent1.setAction(Constant.UPDATE);
+                            intent1.setAction("404");
                             intent1.putExtra("errormsg",myresponse.getErrormsg());
                             activity.sendBroadcast(intent1);
                         }
@@ -140,14 +140,14 @@ public class OKUtils_new {
                                     | Intent.FLAG_ACTIVITY_CLEAR_TOP);
                             activity.startActivity(i);*/
                             Intent intent1=new Intent();
-                            intent1.setAction(Constant.REMOTE_LOGIN);
+                            intent1.setAction("403");
                             intent1.putExtra("errormsg",myresponse.getErrormsg());
                             activity.sendBroadcast(intent1);
                         } else if (myresponse.getCode() == -404) {
 //                            L.d("myurl", url);
 
                             Intent intent1=new Intent();
-                            intent1.setAction(Constant.UPDATE);
+                            intent1.setAction("404");
                             intent1.putExtra("errormsg",myresponse.getErrormsg());
                             activity.sendBroadcast(intent1);
 
